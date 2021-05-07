@@ -15,7 +15,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 100px;
+  width: 10rem;
   height: 40rem;
   z-index: 2;
 }
@@ -29,9 +29,9 @@
   border: none;
   background-color: rgb(31, 30, 30);
   height: 20rem;
-  width: 80px;
-  margin-left: -40px;
-  margin-right: -40px;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
   z-index: 3;
   color:white;
 

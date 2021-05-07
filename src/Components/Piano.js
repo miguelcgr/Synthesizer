@@ -34,7 +34,7 @@ const Piano = () => {
 
   const [pitch, setPitch] = useState(5);
 
-  const [instrument, setInstrument] = useState(synth);
+ const [instrument, setInstrument] = useState(oscill);
 
   
   const now = Tone.now();
@@ -56,8 +56,8 @@ const Piano = () => {
       <div className="piano">
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="C"
         >
           C
@@ -65,8 +65,8 @@ const Piano = () => {
 
         <button
           id="black"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="C#"
         >
           C#
@@ -74,80 +74,80 @@ const Piano = () => {
 
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="D"
         >
           D
         </button>
         <button
           id="black"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="D#"
         >
           D#
         </button>
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="E"
         >
           E
         </button>
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="F"
         >
           F
         </button>
         <button
           id="black"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="F#"
         >
           F#
         </button>
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="G"
         >
           G
         </button>
         <button
           id="black"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="G#"
         >
           G#
         </button>
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="A"
         >
           A
         </button>
         <button
           id="black"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="A#"
         >
           A#
         </button>
         <button
           id="white"
-          onMouseUp={(event) => silenceNote(event)}
-          onMouseDown={(event) => playNote(event)}
+          onPointerUp={(event) => silenceNote(event)}
+          onPointerDown={(event) => playNote(event)}
           className="B"
         >
           B
@@ -163,7 +163,7 @@ const Piano = () => {
       <button onCLick={() => setInstrument(oscill)}>Oscillator</button>
       <button onCLick={() => setInstrument(fatOsc)}>Fat Oscillator</button>
       <button onCLick={() => setInstrument(synth)}>Synth</button>
-      <button onClick={() => setInstrument(phas)}>Phaser</button>
+      <button onClick={() => setInstrument(phas)}>Phaser</button> 
     </div>
   );
 };
