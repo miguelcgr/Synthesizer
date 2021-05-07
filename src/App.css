@@ -1,42 +1,84 @@
 .App {
   text-align: center;
 }
+.piano{
+  display:flex;
+  justify-content: center;
+}
 
-button {
-   
-  border: none;
-   color: white;
+#white {
+
+  border: 1px solid black;
+   color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  width: 100px;
+  height: 40rem;
+  z-index: 2;
 }
-button:hover{
+#white:hover{
   color: black;
   font-weight: 900;
   font-size: large;
-  filter:saturate(7)
-}
-.C {
-  background-color: rgb(233, 60, 60);  
   
 }
+#black{
+  border: none;
+  background-color: rgb(31, 30, 30);
+  height: 20rem;
+  width: 80px;
+  margin-left: -40px;
+  margin-right: -40px;
+  z-index: 3;
+  color:white;
+
+}
+#black:hover{
+  background-color: darkgray;
+}
+.C{
+  background-color: white;  
+  }
+.C:hover{
+  background-color: rgb(233, 60, 60);  
+  }
+
 .D{
-  background-color: gray;
+  background-color: white;
+}
+.D:hover{
+  background-color:rgb(202, 202, 7);
 }
 .E {
-  background-color: rgb(201, 76, 194);
+  background-color:white;
 }
 .F{
-  background-color: blue;
+  background-color: white;
 }
 .G{
-  background-color: orange;
+  background-color: white;
 }
 .A{
-  background-color: purple;
+  background-color: white;
 }
 .B{
+  background-color: white;
+}
+.E:hover {
+  background-color: rgb(201, 76, 194);
+}
+.F:hover{
+  background-color: blue;
+}
+.G:hover{
+  background-color: orange;
+}
+.A:hover{
+  background-color: purple;
+}
+.B:hover{
   background-color: green;
 }
