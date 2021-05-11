@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+ 
+   
+}
+
+body{
+  background-color: rgb(29, 28, 28);
 }
 .piano{
   display:flex;
@@ -8,7 +14,7 @@
 
 #white {
 
-  border: 1px solid black;
+  border: 3px solid rgba(255, 0, 0, 0.26);
    color: black;
   padding: 15px 32px;
   text-align: center;
@@ -26,7 +32,7 @@
   
 }
 #black{
-  border: none;
+  border: 3px solid black;
   background-color: rgb(31, 30, 30);
   height: 20rem;
   width: 6rem;
@@ -34,38 +40,44 @@
   margin-right: -3rem;
   z-index: 3;
   color:white;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
 
 }
 #black:hover{
   background-color: darkgray;
 }
 .C{
-  background-color: white;  
+  background-color: rgb(29, 28, 28);
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
   }
 .C:hover{
   background-color: rgb(233, 60, 60);  
   }
 
 .D{
-  background-color: white;
+  background-color: rgb(29, 28, 28);
 }
 .D:hover{
   background-color:rgb(202, 202, 7);
 }
 .E {
-  background-color:white;
+  background-color: rgb(29, 28, 28);
 }
 .F{
-  background-color: white;
+  background-color: rgb(29, 28, 28);
 }
 .G{
-  background-color: white;
+  background-color: rgb(29, 28, 28);
 }
 .A{
-  background-color: white;
+  background-color: rgb(29, 28, 28);
 }
 .B{
-  background-color: white;
+  background-color: rgb(29, 28, 28);
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 .E:hover {
   background-color: rgb(201, 76, 194);

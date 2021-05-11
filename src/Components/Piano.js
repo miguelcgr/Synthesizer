@@ -2,22 +2,16 @@ import React, { useState } from "react";
 import * as Tone from "tone";
 
 const Piano = () => {
-
-
-
-  const phaser = new Tone.Phaser({
-    frequency: 15,
-    octaves: 5,
-    baseFrequency: 1000,
+  const mono = new Tone.MonoSynth({
+    oscillator: {
+      type: "square",
+    },
+    envelope: {
+      attack: 0.1,
+    },
   }).toDestination();
 
-  const phas = new Tone.FMSynth().connect(phaser);
-
-  const fatOsc = new Tone.FatOscillator("Ab3", "sawtooth", 40).toDestination();
-
-  const synth = new Tone.Synth().toDestination();
-
-  const oscill = new Tone.Synth({
+  const osci = new Tone.Synth({
     oscillator: {
       type: "fmsquare",
       modulationType: "sawtooth",
@@ -32,15 +26,26 @@ const Piano = () => {
     },
   }).toDestination();
 
+  const phaser = new Tone.Phaser({
+    frequency: 15,
+    octaves: 5,
+    baseFrequency: 1000,
+  }).toDestination();
+
+  const phas = new Tone.FMSynth().connect(phaser);
+
+  //const mono = new Tone.FatOscillator("Ab3", "sawtooth", 40).toDestination();
+
+  //const synth = new Tone.Synth().toDestination();
+
   const [pitch, setPitch] = useState(5);
 
- const [instrument, setInstrument] = useState(oscill);
+  const [instrument, setInstrument] = useState(mono);
 
-  
   const now = Tone.now();
 
   const playNote = (event) => {
-    console.log("instrument", instrument.name);
+    // console.log("instrument", instrument.name);
     let note = event.target.className;
 
     instrument.triggerAttack(`${note}${pitch}`, "8n");
@@ -58,6 +63,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="C"
         >
           C
@@ -67,6 +73,7 @@ const Piano = () => {
           id="black"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="C#"
         >
           C#
@@ -75,6 +82,7 @@ const Piano = () => {
         <button
           id="white"
           onPointerUp={(event) => silenceNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           className="D"
         >
@@ -84,6 +92,7 @@ const Piano = () => {
           id="black"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="D#"
         >
           D#
@@ -92,6 +101,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="E"
         >
           E
@@ -100,6 +110,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="F"
         >
           F
@@ -108,6 +119,7 @@ const Piano = () => {
           id="black"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="F#"
         >
           F#
@@ -116,6 +128,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="G"
         >
           G
@@ -124,6 +137,7 @@ const Piano = () => {
           id="black"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="G#"
         >
           G#
@@ -132,6 +146,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="A"
         >
           A
@@ -140,6 +155,7 @@ const Piano = () => {
           id="black"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="A#"
         >
           A#
@@ -148,6 +164,7 @@ const Piano = () => {
           id="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
+          onMouseLeave={(event) => silenceNote(event)}
           className="B"
         >
           B
@@ -160,12 +177,15 @@ const Piano = () => {
         min="1"
         max="9"
       />
-      <button onCLick={() => setInstrument(oscill)}>Oscillator</button>
-      <button onCLick={() => setInstrument(fatOsc)}>Fat Oscillator</button>
-      <button onCLick={() => setInstrument(synth)}>Synth</button>
-      <button onClick={() => setInstrument(phas)}>Phaser</button> 
+
+      {/*  
+      <button onCLick={() => setInstrument(synth)}>Synth</button> */}
+      <button onClick={() => setInstrument(phas)}>Phaser</button>
+      <button onClick={() => setInstrument(mono)}>Monosynth</button>
+      <button onClick={() => setInstrument(osci)}>Oscillator</button>
     </div>
   );
 };
 
 export default Piano;
+
