@@ -57,7 +57,44 @@ const Piano = () => {
   };
 
   return (
-    <div>
+    <div className='box'>
+    
+    {/* <input
+        onChange={(event) => setPitch(event.target.value)}
+        defaultValue="5"
+        type="number"
+        min="1"
+        max="9"
+      /> */}
+
+   <select  onChange={(event) => setPitch(event.target.value)}>   
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5" selected>5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+  </select>
+
+      {/*  
+      <button onCLick={() => setInstrument(synth)}>Synth</button> */}
+      <button onClick={() => setInstrument(phas)}>Phaser</button>
+      <button onClick={() => setInstrument(mono)}>Monosynth</button>
+      <button onClick={() => setInstrument(osci)}>Oscillator</button>
+
+   <div className= 'controls'>
+
+   {instrument.name}
+
+   
+
+
+
+   </div>
+
       <div className="piano">
         <button
           id="white"
@@ -170,20 +207,7 @@ const Piano = () => {
           B
         </button>
       </div>
-      <input
-        onChange={(event) => setPitch(event.target.value)}
-        defaultValue="5"
-        type="number"
-        min="1"
-        max="9"
-      />
-
-      {/*  
-      <button onCLick={() => setInstrument(synth)}>Synth</button> */}
-      <button onClick={() => setInstrument(phas)}>Phaser</button>
-      <button onClick={() => setInstrument(mono)}>Monosynth</button>
-      <button onClick={() => setInstrument(osci)}>Oscillator</button>
-    </div>
+       </div>
   );
 };
 
