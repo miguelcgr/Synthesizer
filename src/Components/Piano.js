@@ -45,7 +45,7 @@ const Piano = () => {
   return (
     <div className="box">
       <div className="controls">
-        <p>Pitch</p>
+        
         <select onChange={(event) => setPitch(event.target.value)}>
           <option value="1">1</option>
           <option value="2">2</option>
