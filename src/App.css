@@ -16,7 +16,7 @@ body{
  
 }
 .box{
- 
+ position: relative;
 }
 .controls{
   
@@ -63,12 +63,8 @@ body{
   margin-right: -3rem;
   z-index: 3;
   color:white;
-  background-color:rgba(61, 61, 61, 0.438);
+}
 
-}
-#black:hover{
-  background-color: rgba(169, 169, 169, 0.26);
-}
 .C{
   background-color: rgba(114, 114, 114, 0.438);  
 
@@ -93,7 +89,6 @@ body{
 }
 .B{
   background-color: rgba(114, 114, 114, 0.438);;  
-
 }
 .C:hover{
   background-color: rgba(0, 255, 234, 0.219);  
@@ -117,6 +112,7 @@ body{
   background-color: rgba(153, 255, 0, 0.185);
 }
 
+
 button {
   background-color: transparent;  
   border: 1px solid black;
@@ -125,38 +121,82 @@ button {
   font-size: large;
 }
 button:hover{
-  background-color: rgba(255, 255, 0, 0.171);
+  background-color: rgba(214, 83, 214, 0.192);
 }
  
-input, select, textarea {
-  color: red;
-  background-color: transparent;
-  border: 1px solid black;
-  color:  black;
-  height: 3rem;
-  width: 3rem;
-  font-size: large;
-  }
+  select::-ms-expand {
+    display: none;
+    }
 
+  select option {
+    background-color: red;
+  }
+ 
+ .selectdiv:after {
 
-  /* .C:hover{
-    background-color: rgb(0,255,232);  
+   
+   top: 18px;
+   padding: 0 0 2px;
+   border-bottom: 1px solid #999;
+   /*left line */
+   
+   position: absolute;
+   pointer-events: none;
+ }
+ 
+ .controls select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   
+   
+   display: block;
+   width: 4rem;
+   max-width: 320px;
+   height: 3rem;
+   float: right;
+   margin: 5px 0px;
+   padding: 0px 24px;
+   font-size: 16px;
+   line-height: 1.75;
+   color: black;
+   background-color: transparent;
+   background-image: none;
+   border: 1px solid black;
+   -ms-word-break: normal;
+   word-break: normal;
+ }
+
+ .Cs{
+  background-color: rgba(53, 53, 53, 0.438);  
   }
-    .D:hover{
-      background-color:rgb(0,124,255);
-  }
-  .E:hover {
-    background-color: rgb(69,0,234);
-  }
-  .F:hover{
-    background-color: rgb(82,0,0);
-  }
-  .G:hover{
-    background-color: rgb(179,0,0);
-  }
-  .A:hover{
-    background-color: rgb(255,99,0);
-  }
-  .B:hover{
-    background-color: rgb(153,255,0);
-  } */
+.Ds{
+  background-color: rgba(53, 53, 53, 0.438); 
+}
+
+.Fs{
+  background-color: rgba(85, 0, 79, 0.438);  
+}
+.Gs{
+  background-color: rgba(53, 53, 53, 0.438);  
+}
+.As{
+  background-color: rgba(53, 53, 53, 0.438);  
+}
+
+ .Cs:hover{
+  background-color: rgba(0, 255, 232, 0.219);  
+}
+  .Ds:hover{
+    background-color:rgba(5, 0, 255, 0.212);
+}
+
+.Fs:hover{
+  background-color: rgba(82, 0, 0, 0.226);
+}
+.Gs:hover{
+  background-color: rgba(238, 0, 0, 0.205);
+}
+.As:hover{
+  background-color: rgba(255, 236, 0, 0.192);
+}

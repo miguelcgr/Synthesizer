@@ -46,7 +46,7 @@ const Piano = () => {
     <div className="box">
       <div className="controls">
         
-        <select onChange={(event) => setPitch(event.target.value)}>
+        <select className='selectdiv' onChange={(event) => setPitch(event.target.value)}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -83,7 +83,7 @@ const Piano = () => {
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="C#"
+          className="Cs"
         >
           C#
         </button>
@@ -101,7 +101,7 @@ const Piano = () => {
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="D#"
+          className="Ds"
         >
           D#
         </button>
@@ -128,7 +128,7 @@ const Piano = () => {
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="F#"
+          className="Fs"
         >
           F#
         </button>
@@ -146,7 +146,7 @@ const Piano = () => {
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="G#"
+          className="Gs"
         >
           G#
         </button>
@@ -164,7 +164,7 @@ const Piano = () => {
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="A#"
+          className="As"
         >
           A#
         </button>
