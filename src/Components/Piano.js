@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import * as Tone from "tone";
 
 const Piano = () => {
-  //const [monoType, setMonoType] = useState('sine');
-
   const [osciType, setOsciType] = useState("sine");
-  
-
 
   const synth = new Tone.Synth({
     oscillator: {
@@ -28,25 +24,23 @@ const Piano = () => {
   const now = Tone.now();
 
   const playNote = (event) => {
-    //console.log("instrument", instrument);
-    let note = event.target.className;
+    let note = event.target.id;
 
-    //instrument.triggerAttack(`${note}${pitch}`, "8n");
     synth.triggerAttack(`${note}${pitch}`, "8n");
-    
   };
   const silenceNote = (event) => {
-    let note = event.target.className;
+    let note = event.target.id;
 
-    // instrument.triggerRelease(now);
     synth.triggerRelease(now);
   };
 
   return (
     <div className="box">
       <div className="controls">
-        
-        <select className='selectdiv' onChange={(event) => setPitch(event.target.value)}>
+        <select
+          className="selectdiv"
+          onChange={(event) => setPitch(event.target.value)}
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -59,7 +53,6 @@ const Piano = () => {
           <option value="8">8</option>
           <option value="9">9</option>
         </select>
-        
 
         <button onClick={() => setOsciType("square")}>Square</button>
         <button onClick={() => setOsciType("sine")}>Sine</button>
@@ -70,110 +63,110 @@ const Piano = () => {
         {" "}
         {/*//////////////  ////////////////__-_ P  I  A  N  O _-__/////////////////////////////*/}
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="C"
+          id="C"
         >
           C
         </button>
         <button
-          id="black"
+          className="Cs"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="Cs"
+          id="C#"
         >
           C#
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
-          className="D"
+          id="D"
         >
           D
         </button>
         <button
-          id="black"
+          className="Ds"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="Ds"
+          id="D#"
         >
           D#
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="E"
+          id="E"
         >
           E
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="F"
+          id="F"
         >
           F
         </button>
         <button
-          id="black"
+          className="Fs"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="Fs"
+          id="F#"
         >
           F#
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="G"
+          id="G"
         >
           G
         </button>
         <button
-          id="black"
+          className="Gs"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="Gs"
+          id="G#"
         >
           G#
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="A"
+          id="A"
         >
           A
         </button>
         <button
-          id="black"
+          className="As"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="As"
+          id="A#"
         >
           A#
         </button>
         <button
-          id="white"
+          className="white"
           onPointerUp={(event) => silenceNote(event)}
           onPointerDown={(event) => playNote(event)}
           onMouseLeave={(event) => silenceNote(event)}
-          className="B"
+          id="B"
         >
           B
         </button>

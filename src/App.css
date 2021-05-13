@@ -1,12 +1,4 @@
-/* .App {
-  text-align: center;
-  background-image: url('./vprwvee.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
- background-position: bottom;
-   
-} */
- 
+
 body{
   background-image: url('./vprwvee.jpg');
   background-repeat: no-repeat;
@@ -35,9 +27,10 @@ body{
   justify-content: center;
 }
 
-#white {
-  
-  border: none;
+.white {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
    color: transparent;
   padding: 15px 32px;
   text-align: center;
@@ -48,67 +41,59 @@ body{
   height: 40rem;
   z-index: 2;
 }
-#white:hover{
+.white:hover{
   
   font-weight: 900;
   font-size: large;
   
 }
-#black{
-  
- border: none;
-  height: 20rem;
-  width: 6rem;
-  margin-left: -3rem;
-  margin-right: -3rem;
-  z-index: 3;
-  color:transparent;
-}
+ 
 
-.C{
+#C{
   background-color: rgba(114, 114, 114, 0.438);  
-
+  border-top-left-radius: 1em;
   }
 
 
-.D{
+#D{
   background-color: rgba(114, 114, 114, 0.438);;  
 }
 
-.E {
+#E {
   background-color: rgba(114, 114, 114, 0.438);;  
 }
-.F{
+#F{
   background-color: rgba(114, 114, 114, 0.438);;  
 }
-.G{
+#G{
   background-color: rgba(114, 114, 114, 0.438);;  
 }
-.A{
+#A{
   background-color: rgba(114, 114, 114, 0.438);;  
 }
-.B{
-  background-color: rgba(114, 114, 114, 0.438);;  
+#B{
+  background-color: rgba(114, 114, 114, 0.438);
+  border-top-right-radius: 1em;
 }
-.C:hover{
+#C:hover{
   background-color: rgba(0, 255, 234, 0.219);  
 }
-  .D:hover{
+#D:hover{
     background-color:rgba(0, 123, 255, 0.212);
 }
-.E:hover {
+#E:hover {
   background-color: rgba(70, 0, 234, 0.267);
 }
-.F:hover{
+#F:hover{
   background-color: rgba(82, 0, 0, 0.226);
 }
-.G:hover{
+#G:hover{
   background-color: rgba(179, 0, 0, 0.205);
 }
-.A:hover{
+#A:hover{
   background-color: rgba(255, 98, 0, 0.192);
 }
-.B:hover{
+#B:hover{
   background-color: rgba(153, 255, 0, 0.185);
 }
 
@@ -167,21 +152,66 @@ button:hover{
    word-break: normal;
  }
 
- .Cs{
+.Cs{
   background-color: rgba(53, 53, 53, 0.438);  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
+  height: 20rem;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  z-index: 3;
+  color:transparent;
   }
 .Ds{
-  background-color: rgba(53, 53, 53, 0.438); 
+  background-color: rgba(53, 53, 53, 0.438);  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
+  height: 20rem;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  z-index: 3;
+  color:transparent;
 }
 
 .Fs{
   background-color: rgba(53, 53, 53, 0.438);  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
+  height: 20rem;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  z-index: 3;
+  color:transparent; 
 }
 .Gs{
   background-color: rgba(53, 53, 53, 0.438);  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
+  height: 20rem;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  z-index: 3;
+  color:transparent;  
 }
 .As{
   background-color: rgba(53, 53, 53, 0.438);  
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+   border:0px;
+  height: 20rem;
+  width: 6rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+  z-index: 3;
+  color:transparent;  
 }
 
  .Cs:hover{
