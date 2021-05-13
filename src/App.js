@@ -1,7 +1,7 @@
  
 import './App.css';
 import Piano from './Components/Piano';
-import * as Tone from 'tone'
+ 
 
 
 
